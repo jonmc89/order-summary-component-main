@@ -4,10 +4,15 @@
 
 :root {
   --Blue-100: hsl(225, 100%, 94%);
+  --Blue-Shadow: hsl(225, 55%, 86%);
   --Blue-700: hsl(245, 75%, 52%);
+  --Blue-700-Hover: hsl(245, 90%, 70%);
+  --Blue-Button-Shadow: hsl(246, 71%, 89%);
   --Blue-50: hsl(225, 100%, 98%);
   --Gray-600: hsl(224, 23%, 55%);
   --Blue-950: hsl(223, 47%, 23%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
 }
 
 /* || Global Styling */
@@ -19,5 +24,129 @@
 }
 
 body {
+  background-color: var(--Blue-100);
   font-family: "Red Hat Display", sans-serif, serif;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* || Card Styling */
+
+.card {
+  align-items: center;
+  background-color: var(--White);
+  box-shadow: 0em 1em 1.4em var(--Blue-Shadow);
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  height: 44em;
+  max-height: 44em;
+  max-width: 24em;
+  overflow: hidden;
+  width: 24em;
+}
+
+.img-container {
+  background-image: url(./images/illustration-hero.svg);
+  background-size: cover;
+  height: 13.5em;
+  max-height: 13.5em;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.txt-section {
+  text-align: center;
+  width: 80%;
+  margin-bottom: 2em;
+}
+
+.crd-title {
+  color: var(--Blue-950);
+  font-size: 1.8em;
+  margin-bottom: 0.8em;
+}
+
+.crd-text {
+  color: var(--Gray-600);
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 150%;
+}
+
+.plan-section {
+  align-items: center;
+  background-color: var(--Blue-50);
+  border-radius: 1em;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  padding: 1em 1.2em;
+  width: 85%;
+}
+
+.price-container {
+  font-size: 0.8em;
+}
+
+.price-value {
+  color: var(--Gray-600);
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-top: 0.1em;
+}
+
+.change-link {
+  color: var(--Blue-700);
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.1s ease-in-out;
+}
+
+.change-link:hover {
+  color: var(--Blue-700-Hover);
+  text-decoration: none;
+}
+
+.button-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.proceed-button {
+  background-color: var(--Blue-700);
+  box-shadow: 0em 1em 1em var(--Blue-Button-Shadow);
+  border: none;
+  border-radius: 0.5em;
+  color: var(--White);
+  cursor: pointer;
+  margin-bottom: 1.8em;
+  font-size: 1.2em;
+  padding: 1em 0;
+  width: 85%;
+}
+
+.proceed-button:hover {
+  background-color: var(--Blue-700-Hover);
+}
+
+.cancel-link {
+  color: var(--Gray-600);
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.cancel-link:hover {
+  color: var(--Black);
 }
