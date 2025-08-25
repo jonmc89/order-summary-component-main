@@ -30,6 +30,9 @@ body {
 
 main {
   align-items: center;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-size: cover;
+  background-repeat: none;
   display: flex;
   justify-content: center;
   width: 100%;
