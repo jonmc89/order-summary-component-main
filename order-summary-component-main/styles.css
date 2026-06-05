@@ -12,7 +12,9 @@
 	/* Neutral Colours */
 	--blue-50  : hsl(225, 100%, 98%);
 	--gray-600 : hsl(224, 23%, 55%);
+	--box-shadow: hsl(225 32% 78%);
 	--blue-950 : hsl(223, 47%, 23%);
+	--white: hsl(0, 0%, 100%);
 }
 
 /* red-hat-display-500 - latin */
@@ -21,7 +23,7 @@
 	font-family  : "Red Hat Display";
 	font-style   : normal;
 	font-weight  : 500;
-	src          : url("../fonts/red-hat-display-v21-latin-500.woff2") format("woff2");
+	src          : url("./fonts/red-hat-display-v21-latin-500.woff2") format("woff2");
 }
 /* red-hat-display-700 - latin */
 @font-face {
@@ -29,7 +31,7 @@
 	font-family  : "Red Hat Display";
 	font-style   : normal;
 	font-weight  : 700;
-	src          : url("../fonts/red-hat-display-v21-latin-700.woff2") format("woff2");
+	src          : url("./fonts/red-hat-display-v21-latin-700.woff2") format("woff2");
 }
 /* red-hat-display-900 - latin */
 @font-face {
@@ -37,6 +39,159 @@
 	font-family  : "Red Hat Display";
 	font-style   : normal;
 	font-weight  : 900;
-	src          : url("../fonts/red-hat-display-v21-latin-900.woff2") format("woff2");
+	src          : url("./fonts/red-hat-display-v21-latin-900.woff2") format("woff2");
+}
+/* || Typography */
+
+h1, p, span, button, a {
+	font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+h1, p {
+	margin-block-end: 1rem;
+}
+
+h1 {
+	color: var(
+	--blue-950,
+	);
+	font-size: 1.5rem;
+	font-weight: 900;
+}
+
+p {
+	color: var(--gray-600);
+	font-size: 1.05rem;
+	font-weight: bold;
+	line-height: 150%;
+	padding: 0 1rem 1rem 1rem;
+}
+
+.plan {
+	color: var(--blue-950);
+	font-weight: 900;
+}
+
+.price {
+	color: var(--gray-600);
+	font-weight: 700;
+}
+
+a {
+	color: var(--blue-700);
+	font-weight: 700;
+	transition: opacity 0.25s ease-in-out;
+}
+
+a {
+	opacity: 0.7;
+}
+
+button {
+	font-weight: 900;
+	letter-spacing: 0.05rem;
+}
+
+.proceed-btn {
+	color: var(--white);
+}
+
+.cancel-btn {
+	color: var(--gray-600);
+	transition: color 0.25s;
+}
+
+.cancel-btn:hover {
+	color: var(--blue-950);
+}
+
+/* || Main Styles */
+
+main {
+	align-items: center;
+	background-color: var(--blue-100);
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	width: 100%;
+}
+
+.card {
+	background-color: var(--white);
+	border-radius: 1rem;
+	box-shadow: 1rem 1rem 3rem var(--box-shadow);
+	overflow: hidden;
+	min-width: 22rem;
+	width: 22.5rem;
+}
+
+.hero-img {
+	width: 100%;
+}
+
+.card-text-container {
+	padding: 1.8rem 1.5rem 1rem 1.5rem;
+}
+
+.price-container {
+	align-items: center;
+	background-color: var(--blue-50);
+	border-radius: 1rem;
+	display: flex;
+	justify-content: space-between;
+	margin-block-end: 2rem;
+	padding: 1rem;
+}
+
+.price {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	justify-content: flex-start;
+}
+a {
+	cursor: pointer;
+}
+
+.btn-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-block-end: 0.5rem;
+}
+
+button {
+	border: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	padding: 1rem;
+}
+
+.proceed-btn {
+	background-color: var(--blue-700);
+	box-shadow: 0 1rem 2.5rem var(--box-shadow);
+	transition: opacity 0.25s ease-in-out;
+}
+
+.proceed-btn:hover {
+	opacity: 0.7;
+}
+
+.cancel-btn {
+	background-color: transparent;
+}
+
+/* || Media Query */
+
+@media screen and (min-width: 51.25rem) {
+	.card {
+		width: 28rem;
+	}
+
+	.card-text-container {
+	padding: 1.8rem 2.2rem 1rem 2.2rem;
+
+	}
 }
 
